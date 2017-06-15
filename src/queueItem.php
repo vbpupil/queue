@@ -11,13 +11,18 @@ namespace App;
 class queueItem
 {
 
+    /**
+     * @var
+     */
     protected $handle;
 
+    /**
+     * queueItem constructor.
+     * @param $handle
+     */
     public function __construct($handle)
     {
         $this->handle = $handle;
     }
-
-
 
 }

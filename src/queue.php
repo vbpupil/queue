@@ -11,16 +11,33 @@ namespace App;
 class queue
 {
 
+    /**
+     * @var
+     */
     protected $limit;
+    /**
+     * @var int
+     */
     protected $count;
+    /**
+     * @var array
+     */
     protected $items = [];
 
+    /**
+     * queue constructor.
+     * @param $limit
+     */
     public function __construct($limit)
     {
         $this->limit = $limit;
         $this->count = 0;
     }
 
+    /**
+     * @param queueItem $item
+     * @return $this
+     */
     public function addItem(queueItem $item)
     {
         if(!$this->availableSpaceCheck()){
@@ -34,11 +51,17 @@ class queue
         return $this;
     }
 
+    /**
+     * @return bool
+     */
     public function availableSpaceCheck()
     {
         return $this->count < $this->limit;
     }
 
+    /**
+     * @return int
+     */
     public function getCount()
     {
         return $this->count;
