@@ -38,4 +38,9 @@ class queue
     {
         return $this->count < $this->limit;
     }
+
+    public function getCount()
+    {
+        return $this->count;
+    }
 }
