@@ -41,11 +41,12 @@ class queue
     public function addItem(queueItem $item)
     {
         if(!$this->availableSpaceCheck()){
-            array_pop($this->items);
+            unset($this->items[0]);
+            $this->items = array_values($this->items);
             $this->count--;
         }
 
-        array_unshift($this->items, $item);
+        $this->items[] = $item;
         $this->count++;
 
         return $this;
@@ -65,5 +66,10 @@ class queue
     public function getCount()
     {
         return $this->count;
+    }
+
+    public function getItems()
+    {
+        return $this->items;
     }
 }

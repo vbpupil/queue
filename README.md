@@ -7,12 +7,18 @@ items from the end.
 ## Sample Usage
 
 ```php
-$q = new queue(4);
-$qi = new queueItem('deans 1');
-$qi1 = new queueItem('deans 2');
+$q = new queue(1);
+$qi = new queueItem('1');
+$qi1 = new queueItem('2');
+$qi2 = new queueItem('3');
+$qi3 = new queueItem('4');
+$qi4 = new queueItem('5');
 
 $q->addItem($qi)
-    ->addItem($qi1);
+    ->addItem($qi1)
+    ->addItem($qi2)
+    ->addItem($qi3)
+    ->addItem($qi4);
 
-dump($q);
+dump($q->getItems());
 ```
