@@ -22,3 +22,5 @@ $q->addItem($qi)
 
 dump($q->getItems());
 ```
+
+The above example will return 1 item with the value of **5**.
