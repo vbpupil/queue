@@ -6,8 +6,8 @@
  * @version 1.0
  */
 
-use App\queue;
-use App\queueItem;
+use vbpupil\queue;
+use vbpupil\queueItem;
 
 class Test extends PHPUnit_Framework_TestCase
 {
