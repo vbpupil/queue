@@ -1,7 +1,7 @@
 {
   "name" : "vbpupil/queue",
   "description" : "A simple Queue data structure.",
-  "php" : "5.6.0",
+  "license": "MIT",
   "autoload" : {
     "psr-4" : {
       "vbpupil\\" : "src"
