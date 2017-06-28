@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-namespace App;
+namespace vbpupil;
 
 
 class queueItem

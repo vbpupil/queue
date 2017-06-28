@@ -2,10 +2,10 @@
 
 include 'vendor/autoload.php';
 
-use App\queue;
-use App\queueItem;
+use vbpupil\queue;
+use vbpupil\queueItem;
 
-$q = new queue(1);
+$q = new queue(3);
 $qi = new queueItem('1');
 $qi1 = new queueItem('2');
 $qi2 = new queueItem('3');
