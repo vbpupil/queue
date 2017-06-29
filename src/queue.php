@@ -38,7 +38,7 @@ class Queue
      * @param queueItem $item
      * @return $this
      */
-    public function addItem(queueItem $item)
+    public function addItem($item)
     {
         if(!$this->availableSpaceCheck()){
             unset($this->items[0]);

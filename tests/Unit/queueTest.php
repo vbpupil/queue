@@ -26,7 +26,7 @@ class queueTest extends \PHPUnit_Framework_TestCase
         $this->sut->addItem(new queueItem('test'));
         $this->assertEquals(1, $this->sut->getCount());
 
-        $this->assertInstanceOf('vbpupil\queueItem', $this->sut->getItems()[0]);
+        $this->assertInternalType('array', $this->sut->getItems());
     }
 
 
