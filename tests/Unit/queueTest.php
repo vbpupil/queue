@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 /**
  * @author  dean
  * @date    15/06/17
@@ -9,7 +11,7 @@
 use vbpupil\queue;
 use vbpupil\queueItem;
 
-class Test extends PHPUnit_Framework_TestCase
+class queueTest extends \PHPUnit_Framework_TestCase
 {
 
     protected $sut;
@@ -18,12 +20,16 @@ class Test extends PHPUnit_Framework_TestCase
     {
         $this->sut = new queue(3);
     }
-
-    public function testAddItem()
+    /** @test */
+    public function testAddAndGetItem()
     {
         $this->sut->addItem(new queueItem('test'));
         $this->assertEquals(1, $this->sut->getCount());
+
+        $this->assertInstanceOf('vbpupil\queueItem', $this->sut->getItems()[0]);
     }
+
+
 
     public function testLimit()
     {
@@ -31,8 +37,9 @@ class Test extends PHPUnit_Framework_TestCase
         $this->sut->addItem(new queueItem('test2'));
         $this->sut->addItem(new queueItem('test3'));
         $this->assertEquals(3, $this->sut->getCount());
-
     }
+
+
 
     public function testAvailableSpaceCheck()
     {
@@ -42,4 +49,6 @@ class Test extends PHPUnit_Framework_TestCase
         $q->addItem(new queueItem('testttt'));
         $this->assertEquals(false, $q->availableSpaceCheck());
     }
+
+
 }
