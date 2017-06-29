@@ -8,7 +8,7 @@
 
 namespace vbpupil;
 
-class queue
+class Queue
 {
 
     /**
