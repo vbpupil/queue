@@ -1,7 +1,7 @@
 ## Quality Assurance
 
 ![PHP 8](https://img.shields.io/badge/PHP-8.1-blue.svg)
-[![Build Status](https://app.travis-ci.com/vbpupil/queue.svg?branch=master)](https://travis-ci.org/vbpupil/queue)
+[![Build Status](https://app.travis-ci.com/vbpupil/queue.svg?branch=master)](https://app.travis-ci.com/vbpupil/queue)
 [![Code Climate](https://codeclimate.com/github/vbpupil/queue/badges/gpa.svg)](https://codeclimate.com/github/vbpupil/queue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
