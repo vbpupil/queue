@@ -1,6 +1,7 @@
 {
   "name": "vbpupil/queue",
-  "description": "A simple Queue data structure with a limit.",
+  "description": "A simple Queue data structure.",
+  "version": "2.0.0",
   "license": "MIT",
   "php": ">=8.1",
   "authors": [
