@@ -16,8 +16,12 @@ items from the end.
 ## Sample Usage
 
 ```php
+include 'vendor/autoload.php';
+
+use vbpupil\Queue\Queue;
+
 // create a new queue and specify a limit - here we have set it to hold 1 item.
-$q = new queue(1);
+$q = new Queue(1);
 
 //add items
 $q->addItem('Item 1')
