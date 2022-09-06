@@ -10,21 +10,23 @@
 # Queue Data Structure
 
 A simple Queue data structure mechanism which allows you to set a max limit of items
-you wish to carry. After the max amount is met any subsequent additions will knock off
+you wish to hold. After the max amount is met any subsequent additions will knock off
 items from the end.
 
 ## Sample Usage
 
 ```php
+// create a new queue and specify a limit - here we have set it to hold 1 item.
 $q = new queue(1);
 
-$q->addItem(1)
-    ->addItem(2)
-    ->addItem(3)
-    ->addItem(4)
-    ->addItem(5);
+//add items
+$q->addItem('Item 1')
+    ->addItem('Item 2')
+    ->addItem('Item 3')
+    ->addItem('Item 4')
+    ->addItem('Item 5');
 
-dump($q->getItems());
+echo($q->getItems());
 ```
 
-The above example will return 1 item with the value of **5**.
+The above example will return 1 item with the value of **Item 5**.
